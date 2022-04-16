@@ -1,0 +1,133 @@
+@charset "utf-8";
+/* pc */
+/* reset */
+html {-webkit-text-size-adjust: none; text-size-adjust: none;}
+body {background-color: yellow; margin: 0; }
+h1, ul, li, p, dl, dt, dd {margin: 0; padding:0;}
+img{margin:0; padding: 0;}
+h1, h2, h3, h4, h5, h6 {font-weight: 700; margin: 0;}
+a {color: inherit; text-decoration: inherit;}
+li {list-style: none;}
+address, em, i, cite {font-style: normal;}
+table {border-collapse: collapse;}
+table caption {overflow: hidden; width: 0; height: 0;}
+i[class^="fa"] {position: relative; display: inline-block; vertical-align: middle;}
+i[class^="fa"] span {position: absolute; left: -9999px;}
+.ir-hidden {position: absolute; left: -9999px;}
+.tablet,
+.mobile-tablet,
+.mobile {display: none !important;}
+br.only-m {content: '';}
+br.only-m::after {content: '\00a0';}
+
+/* common */
+body {font-family: 'NotoSansKR', sans-serif; font-size: 14px; color: #000000; background-color: #ffffff;}
+#wrapper {min-width: 1024px; overflow: hidden; position: relative; margin: 0 auto;}
+#skip-nav {position: fixed; left: 0; top: -40px; width: 100%; line-height: 40px; text-align: center; background-color: rgba(0,0,0,0.8); color : #ffffff; font-size: 16px; transition: top 0.3s; z-index: 100000;} 
+#skip-nav:focus {top: 0;}
+
+/* header */
+#header {position: fixed; left: 0; top: 0; width: 100%; height: 100px; background-color: #CECDCD; z-index: 10000; text-align: right;}
+#header.on {background-color: rgba(0,0,0,0.2); height: 80px;}
+#header.on > div.content-box >  h1 {width: 160px; height: 62px;}
+#header.on #nav > ul > li > a {line-height: 80px;}
+#header > div.content-box {max-width: 1470px; height: 100%;  margin: 0 auto; padding: 0 25px; box-sizing: border-box; position: relative; text-align: right; vertical-align: middle;}
+#header > div.content-box >  h1 {width: 180px; height: 72px;  display: inline-block; position: absolute; left: 25px; top: 50%; transform: translate(0, -50%); background-color: gray;}
+#header > div.content-box >  h1 > a {display: block; width: 100%; height: 100%;}
+#header #nav {display: inline-block; height: 100%; }
+#header #nav > ul {overflow: hidden; height: 100%;}
+#header #nav > ul > li {float: left;  height: 100%; box-sizing: border-box;}
+#header #nav > ul > li + li {margin-left: 4px; }
+#header #nav > ul > li > a {display: block; width: 100%; height: 100%;  padding: 0 30px; line-height: 100px; box-sizing: border-box; font-size: 15px; font-weight: 700; transition: all 0.3s; }
+#header #nav > ul > li:hover > a {color: #fff;}
+
+/* main */
+#main {}
+#main > ul#page-indicator {position: fixed; right: 2%; top: 50%; transform: translate(0, -50%); background-color: green; z-index: 5000;}
+#main > ul#page-indicator > li + li {margin-top: 20px;}
+#main > ul#page-indicator > li > a {width: 15px; height: 15px; border-radius: 50px; background-color: purple; display: block; text-indent: -999px; overflow: hidden;}
+#main > ul#page-indicator > li.on > a {}
+
+/* main-section */
+#main > section.page {max-width: none; height: 100vh; box-sizing: border-box; padding: 120px 0 80px; overflow: hidden;}
+#main section#page1 {background-color: yellow;}
+#main section#page2 {background-color: pink;}
+#main section#page3 {background-color: #fff;}
+#main section#page4 {background-color: gray;}
+#main section#page5 {background-color: purple;}   
+#main section#page6 {background-color: #fff;}
+#main section#page7 {background-color: #ededed;}
+#main section > div.box {max-width: 1470px; margin: 0 auto; height: 100%; text-align: center; background-color: plum; overflow: hidden;}
+#main section > div.box > h2 {font-size: 48px; margin-bottom: 20px;}
+
+/* section별 css: 1 */
+#main section#page2 div.search-box {width: 633px; height: 88px; background-color: #fff; border-radius: 10px; border: 2px solid #D6D4CD; box-sizing: border-box; display: inline-block; position: relative;}
+#main section#page2 div.search-box > i {font-size: 40px; position: absolute; right: 20px; top: 50%; transform: translate(0, -50%); color: #D6D4CD;}
+#main section#page2  p.content {text-align: left; background-color: lime; font-size: 18px; line-height: 1.8; padding: 40px 0 20px; word-spacing: 1.5px;}
+#main section#page2  p.content.on > span {background-color: pink; animation: textShow 1s ease 0s 1 normal forwards;}
+/* animation: 위에서 올라오는 애니메이션 */
+@keyframes textShow {
+    from {
+      transform: translateY(140%) rotate(5deg);
+    }
+    to {
+      transform: translateY(0) rotate(0);
+    }
+  } 
+#main section#page2 div.whoru-box > p {background-color: blue; display: block; width: 100%;}
+#main section#page2 div.whoru-box {background-color: yellow; }
+#main section#page2 div.whoru-box > div.big-box {display: flex; justify-content: space-between;}
+#main section#page2 div.whoru-box > div.big-box > div.box { box-sizing: border-box; width: 400px; height: 210px; border-radius: 15px; background-color: aqua; overflow: hidden;}
+#main section#page2 div.whoru-box > div.big-box > div.box + div.box {}
+#main section#page2 div.whoru-box > div.big-box > div.box > div.image {width: 100%; height: 140px; background-color: #fff;}
+#main section#page2 div.whoru-box > div.big-box > div.box > div.text {width: 100%; height: 70px; background-color: lime;}
+
+/* section별 css: 3 */
+#main section#page3 > div.box > h2 {margin-bottom: 40px;}
+#main section#page3 div.profileBox {width: 1088px;  border-radius: 10px; background-color: #EFEEEB; box-sizing: border-box; display: inline-block; position: relative; z-index: 20; padding: 30px 71px; text-align: left;}
+#main section#page3 div.profileBox::after {content: ''; width: 100%; height: 15px;  border-radius: 10px;  background-color: #D6D4CD; position: absolute; left: 0; top: -5px; z-index: -10; }
+#main section#page3 div.profileBox > div.content-box {overflow: hidden;}
+#main section#page3 div.profileBox > div.content-box  p {font-size: 18px; font-weight: 700; margin-bottom: 10px;}
+#main section#page3 div.profileBox > div.content-box  p.job {font-size: 15px;}
+#main section#page3 div.profileBox > div.content-box > div.text > ul {margin-bottom: 20px;}
+#main section#page3 div.profileBox > div.content-box > div.text > ul::after {content:''; display: block; clear: both;}
+#main section#page3 div.profileBox > div.content-box > div.text > ul > li {float: left;}
+#main section#page3 div.profileBox > div.content-box > div.text > ul > li:hover > a {background-color: #fff; color:#ABAAA5;}
+#main section#page3 div.profileBox > div.content-box > div.text > ul > li + li {margin-left: 8px;}
+#main section#page3 div.profileBox > div.content-box > div.text > ul > li > a {display: inline-block; padding: 9px 24px; box-sizing: border-box; font-size: 14px; font-weight: 700; border-radius: 10px; background-color: #ABAAA5; box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; transition: all 0.3s;}
+#main section#page3 div.profileBox > div.content-box > div.list {overflow: hidden; display: inline-block;}
+#main section#page3 div.profileBox > div.content-box > div.list >  ul {font-size: 14px; font-weight: 700; line-height: 2; float: left;}
+#main section#page3 div.profileBox > div.content-box ul.list-title {margin-right: 25px; }
+#main section#page3 div.profileBox > div.content-box ul.list-title > li {}
+#main section#page3 div.profileBox > div.content-box ul.list-title > li > a {color: #ABAAA5;}
+#main section#page3 div.profileBox > div.content-box ul.list-content {float: left; font-weight: 400;}
+#main section#page3 div.profileBox > div.content-box > div.ability-box {clear: both; margin-top: 20px;}
+#main section#page3 div.profileBox > div.content-box > div.ability-box > ul {overflow: hidden; text-align: center; padding: 0px 40px; border: 2px solid #D6D4CD; border-radius: 10px; background-color: #fff;}
+#main section#page3 div.profileBox > div.content-box > div.ability-box  > ul > li {float: left;}
+#main section#page3 div.profileBox > div.content-box > div.ability-box  > ul > li + li {margin-left: 80px;}
+#main section#page3 div.profileBox > div.content-box > div.ability-box > ul > li > span.circle1 {display: block; width: 100px; height: 100px; border-radius: 500px; background-color: #ABAAA5; position: relative; margin-top: 12px; animation: spin ;}
+#main section#page3 div.profileBox > div.content-box > div.ability-box > ul > li > span.circle1::after {content:''; display: block; width: 80px; height: 80px;border-radius: 500px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); background-color: #fff;}
+#main section#page3 div.profileBox > div.content-box > div.ability-box > ul > li > span.text {font-size: 17px; font-weight: 700;  padding: 12px 0; display: block;}
+/* animation */
+@keyframes spin{
+  to{transform: rotate(90deg);}
+}
+
+/* #main section#page3 div.profileBox > div.designBox {background-color: green;}
+#main section#page3 div.profileBox > div.designBox > div.mainBox {background-color: skyblue;}
+#main section#page3 div.profileBox > div.designBox > div.mainBox > div.textBox {margin-bottom: 10px;}
+#main section#page3 div.profileBox > div.designBox > div.mainBox > div.textBox > h2 {font-size: 30px; margin-bottom: 15px;}
+#main section#page3 div.profileBox > div.designBox > div.mainBox > div.textBox > span {font-size: 18px; font-weight: 700;}
+#main section#page3 div.profileBox > div.designBox > div.mainBox > ul.list {margin-bottom: 26px;}
+#main section#page3 div.profileBox > div.designBox > div.mainBox > ul.list::after {content: ''; display: block; clear: both;}
+#main section#page3 div.profileBox > div.designBox > div.mainBox > ul.list > li {float: left;}
+#main section#page3 div.profileBox > div.designBox > div.mainBox > ul.list > li:hover > a {background-color: #fff; color:#ABAAA5; }
+#main section#page3 div.profileBox > div.designBox > div.mainBox > ul.list > li + li {margin-left: 8px;}
+#main section#page3 div.profileBox > div.designBox > div.mainBox > ul.list > li > a {display: inline-block; padding: 9px 24px; box-sizing: border-box; font-size: 14px; font-weight: 700; border-radius: 10px; background-color: #ABAAA5; box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; transition: all 0.3s;}
+#main section#page3 div.profileBox > div.designBox > div.mainBox > div.whiteBox {background-color: #fff; border-radius: 10px; width: 100%; padding: 28px 38px; box-sizing: border-box;}
+
+#main section#page3 div.profileBox > div.designBox > div.mainBox > div.whiteBox ul.subTitle1 {}
+#main section#page3 div.profileBox > div.designBox > div.mainBox > div.whiteBox ul.subTitle1 */
+ /* footer */
+#footer {width: 100%; height: 100px; background-color: gray;}
+#footer > div.content-box {max-width: 1470px; height: 100%;  margin: 0 auto; padding: 0 25px; box-sizing: border-box; position: relative; text-align: center; vertical-align: middle;}
