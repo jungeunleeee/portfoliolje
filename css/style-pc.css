@@ -53,12 +53,10 @@ body {font-family: 'NotoSansKR', sans-serif; font-size: 14px; color: #000000; ba
 #main section#page1 {background-color: yellow;}
 #main section#page2 {background-color: pink;}
 #main section#page3 {background-color: #fff;}
-#main section#page4 {background-color: gray;}
+#main section#page4 {background-color: #D6D4CD;}
 #main section#page5 {background-color: purple;}   
-#main section#page6 {background-color: #fff;}
-#main section#page7 {background-color: #ededed;}
-#main section > div.box {max-width: 1470px; margin: 0 auto; height: 100%; text-align: center; background-color: plum; overflow: hidden;}
-#main section > div.box > h2 {font-size: 48px; margin-bottom: 20px;}
+#main section > div.content-box {padding: 0 150px; margin: 0 auto; height: 100%; text-align: center;  overflow: hidden;}
+#main section > div.content-box > h2 {font-size: 48px; margin-bottom: 40px;}
 
 /* section별 css: 1 */
 #main section#page2 div.search-box {width: 633px; height: 88px; background-color: #fff; border-radius: 10px; border: 2px solid #D6D4CD; box-sizing: border-box; display: inline-block; position: relative;}
@@ -83,8 +81,8 @@ body {font-family: 'NotoSansKR', sans-serif; font-size: 14px; color: #000000; ba
 #main section#page2 div.whoru-box > div.big-box > div.box > div.text {width: 100%; height: 70px; background-color: lime;}
 
 /* section별 css: 3 */
-#main section#page3 > div.box > h2 {margin-bottom: 40px;}
-#main section#page3 div.profileBox {width: 1088px;  border-radius: 10px; background-color: #EFEEEB; box-sizing: border-box; display: inline-block; position: relative; z-index: 20; padding: 30px 71px; text-align: left;}
+#main section#page3 > div.content-box > h2 {margin-bottom: 40px;}
+#main section#page3 div.profileBox {  border-radius: 10px; background-color: #EFEEEB; box-sizing: border-box; display: inline-block; position: relative; z-index: 20; padding: 30px 71px; text-align: left;}
 #main section#page3 div.profileBox::after {content: ''; width: 100%; height: 15px;  border-radius: 10px;  background-color: #D6D4CD; position: absolute; left: 0; top: -5px; z-index: -10; }
 #main section#page3 div.profileBox > div.content-box {overflow: hidden;}
 #main section#page3 div.profileBox > div.content-box  p {font-size: 18px; font-weight: 700; margin-bottom: 10px;}
@@ -95,8 +93,10 @@ body {font-family: 'NotoSansKR', sans-serif; font-size: 14px; color: #000000; ba
 #main section#page3 div.profileBox > div.content-box > div.text > ul > li:hover > a {background-color: #fff; color:#ABAAA5;}
 #main section#page3 div.profileBox > div.content-box > div.text > ul > li + li {margin-left: 8px;}
 #main section#page3 div.profileBox > div.content-box > div.text > ul > li > a {display: inline-block; padding: 9px 24px; box-sizing: border-box; font-size: 14px; font-weight: 700; border-radius: 10px; background-color: #ABAAA5; box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; transition: all 0.3s;}
-#main section#page3 div.profileBox > div.content-box > div.list {overflow: hidden; display: inline-block;}
+#main section#page3 div.profileBox > div.content-box > div.list {display: block; position: relative;}
+#main section#page3 div.profileBox > div.content-box > div.list::after {content: ''; display: block; clear: both;}
 #main section#page3 div.profileBox > div.content-box > div.list >  ul {font-size: 14px; font-weight: 700; line-height: 2; float: left;}
+#main section#page3 div.profileBox > div.content-box > div.list > img {width: 100px; position: absolute; right: 0; top: 0; border-radius: 10px; box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px ;} 
 #main section#page3 div.profileBox > div.content-box ul.list-title {margin-right: 25px; }
 #main section#page3 div.profileBox > div.content-box ul.list-title > li {}
 #main section#page3 div.profileBox > div.content-box ul.list-title > li > a {color: #ABAAA5;}
@@ -105,7 +105,11 @@ body {font-family: 'NotoSansKR', sans-serif; font-size: 14px; color: #000000; ba
 #main section#page3 div.profileBox > div.content-box > div.ability-box > ul {overflow: hidden; text-align: center; padding: 0px 40px; border: 2px solid #D6D4CD; border-radius: 10px; background-color: #fff;}
 #main section#page3 div.profileBox > div.content-box > div.ability-box  > ul > li {float: left;}
 #main section#page3 div.profileBox > div.content-box > div.ability-box  > ul > li + li {margin-left: 80px;}
-#main section#page3 div.profileBox > div.content-box > div.ability-box > ul > li > span.circle1 {display: block; width: 100px; height: 100px; border-radius: 500px; background-color: #ABAAA5; position: relative; margin-top: 12px; animation: spin ;}
+#main section#page3 div.profileBox > div.content-box > div.ability-box > ul > li > span.circle1 {display: block; width: 100px; height: 100px; border-radius: 500px; background-color: #ABAAA5; position: relative; margin-top: 12px;}
+#main section#page3 div.profileBox > div.content-box > div.ability-box > ul > li:nth-child(1) > span.circle1 {background: conic-gradient(#ffc33b 0% 90%, #ABAAA5 90% 100%);}
+#main section#page3 div.profileBox > div.content-box > div.ability-box > ul > li:nth-child(2) > span.circle1 {background: conic-gradient(#ffc33b 0% 90%, #ABAAA5 90% 100%);} 
+#main section#page3 div.profileBox > div.content-box > div.ability-box > ul > li:nth-child(3) > span.circle1 {background: conic-gradient(#ffc33b 0% 80%, #ABAAA5 80% 100%);} 
+#main section#page3 div.profileBox > div.content-box > div.ability-box > ul > li:nth-child(4) > span.circle1 {background: conic-gradient(#ffc33b 0% 80%, #ABAAA5 80% 100%);}    
 #main section#page3 div.profileBox > div.content-box > div.ability-box > ul > li > span.circle1::after {content:''; display: block; width: 80px; height: 80px;border-radius: 500px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); background-color: #fff;}
 #main section#page3 div.profileBox > div.content-box > div.ability-box > ul > li > span.text {font-size: 17px; font-weight: 700;  padding: 12px 0; display: block;}
 /* animation */
@@ -113,6 +117,18 @@ body {font-family: 'NotoSansKR', sans-serif; font-size: 14px; color: #000000; ba
   to{transform: rotate(90deg);}
 }
 
+/* section별 css: 4 */
+#main section#page4 {}
+#main section#page4 div.box {background-color: green; padding: 0 100px;} 
+#main section#page4 div.box > ul {}
+#main section#page4 div.box > ul::after {content:''; display: block; clear: both;}
+#main section#page4 div.box > ul > li {float: left; width: 350px; height: 350px; border-radius: 10px; background-color: #EFEEEB; padding: 10px; box-sizing: border-box; box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;}
+#main section#page4 div.box > ul > li + li {margin-left: 40px;}
+#main section#page4 div.box > ul > li > a {display: block; width: 100%; height: 100%; border-radius: 10px;}
+#main section#page4 div.box > ul > li > a > div {height: 50%;}
+#main section#page4 div.box > ul > li > a > div.image {background-color: #fff; border-radius: 10px;}
+#main section#page4 div.box > ul > li > a > div.text {padding: 20px; box-sizing: border-box;}
+#main section#page4 div.box > ul > li > a > div.text > p.title {font-size: 15px; font-weight: 700; color: #726F6F;}
 /* #main section#page3 div.profileBox > div.designBox {background-color: green;}
 #main section#page3 div.profileBox > div.designBox > div.mainBox {background-color: skyblue;}
 #main section#page3 div.profileBox > div.designBox > div.mainBox > div.textBox {margin-bottom: 10px;}
